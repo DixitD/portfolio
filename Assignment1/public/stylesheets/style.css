@@ -1,0 +1,335 @@
+/*<!--     Author- Dixit Hihoriya       -->
+<!--     StudentID-301201312     -->*/
+
+*,
+::after,
+::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box
+}
+
+.effectTab-header .caption,
+.effectTab-header .title {
+	font-weight: 700;
+	padding-bottom: 20px;
+	position: relative;
+	display: inline-block;
+	color: #555;
+	margin: 0 0 20px;
+	text-align: center;
+	text-transform: uppercase
+}
+
+.effectTab-header .title {
+	font-size: 36px;
+	font-family: Oswald, sans-serif
+}
+
+.effectTab-header .caption {
+	font-size: 30px;
+	font-family: 'Open Sans', sans-serif
+}
+
+.column-12,
+.column-4 {
+	float: left;
+	padding: 15px
+}
+
+
+.effectTab-header .title::after,
+.effectTab-header .title::before {
+	position: absolute;
+	background: linear-gradient(to right, #ed6ea0 0, #ec8c69 100%);
+	content: ""
+}
+
+.effectTab-header .title::before {
+	left: 0;
+	width: 156%;
+	height: 3px;
+	margin-left: -28%;
+	bottom: -1.5px
+}
+
+.effectTab-header .title::after {
+	left: 50%;
+	width: 25px;
+	height: 25px;
+	bottom: -26px;
+	margin: 0 0 0 -10px;
+	-webkit-clip-path: polygon(75% 0, 75% 69%, 41% 93%, 0 68%, 0 0);
+	clip-path: polygon(75% 0, 75% 69%, 41% 93%, 0 68%, 0 0)
+}
+
+
+.column-4 {
+	width: 33.33333333333333%
+}
+.column-12,
+.wrapper-full {
+	width: 100%
+}
+
+.custom-row::after {
+	content: "";
+	display: table;
+	clear: both
+}
+
+.wrapper {
+	max-width: 1140px;
+	margin: 0 auto;
+	position: relative
+}
+
+.header {
+	background-color: #485666;
+	padding: 8px 0;
+	position: static;
+	z-index: 2000
+}
+
+.header h1 {
+	color: #fff;
+	font-family: Poppins;
+	font-weight: 400;
+	font-size: 2.2rem;
+	padding-left: 40px
+}
+
+.box-tab {
+	margin: 10px 0
+}
+
+.effect {
+	margin: auto;
+	box-shadow: 0 0 15px 5px rgba(0, 0, 0, .07);
+	background-color: #fff;
+	border: 5px solid #f5f5f5
+}
+
+.tab-container {
+	padding: 50px 0
+}
+
+.tab-head {
+	text-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	margin-left: auto;
+	margin-right: auto
+}
+
+.tab .effect {
+	position: relative;
+	overflow: hidden;
+	max-height: 240px;
+	max-width: 350px;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer
+}
+
+.tab .effect img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 1
+}
+
+.tab .effect .tab-text {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25rem;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%
+}
+
+.tab-text h2 {
+	color: #fff;
+	margin: 0;
+	font-size: 1.5rem
+}
+
+.tab-text p {
+	color: #fff;
+	margin: 0;
+	font-size: 1rem
+}
+
+.hide {
+	display: none
+}
+
+@media (max-width:575px) {
+	.column-xs-12 {
+		float: left;
+		padding: 15px
+	}
+	.column-xs-12 {
+		width: 100%
+	}
+	.hide-xs {
+		display: none
+	}
+	.effectTab-header .title::before {
+		width: 125%;
+		left: 15%
+	}
+	.tab-container {
+		padding-top: 25px;
+		padding-bottom: 25px
+	}
+}
+
+
+.effect.effect-three {
+	background: linear-gradient(-45deg, #0C71E9 0, #034B96, 100%);
+	text-align: left
+}
+
+.effect.effect-three h2 {
+	transform: translate3d(25px, 0, 0);
+	-webkit-transform: translate3d(25px, 0, 0);
+	transition: all .35s;
+	font-family: Oswald;
+	font-size: 1.6rem
+}
+
+.effect.effect-three h2:before {
+	content: "[ ";
+	position: absolute;
+	left: -15px;
+	bottom: 3px;
+	font-weight: 400
+}
+
+.effect.effect-three:hover h2 {
+	transform: translate3d(0, 0, 0);
+	-webkit-transform: translate3d(0, 0, 0);
+	opacity: .5
+}
+
+.effect.effect-three .tab-text:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	border: 140px solid red;
+	border-radius: 50% 0 0 50%;
+	opacity: 0;
+	transform: translate3d(50%, 50%, 0) rotate3d(0, 0, 1, 135deg);
+	transition: all .35s .15s;
+	border-color: transparent transparent transparent #fff
+}
+
+.effect.effect-three:hover .tab-text:before {
+	transform: translate3d(50%, 50%, 0) rotate3d(0, 0, 1, 45deg);
+	opacity: .8;
+	transition-delay: 0s
+}
+
+.effect.effect-three p {
+	position: absolute;
+	width: 31px;
+	height: 36px;
+	bottom: 70px;
+	right: -31px;
+	font-size: 120%
+}
+
+.effect.effect-three p a {
+	width: 31px;
+	height: 36px;
+	position: absolute;
+	opacity: 0;
+	transition: all .35s cubic-bezier(.25, .4, .2, .5) 0s
+}
+
+.effect.effect-three p a i {
+	color: #5d504f;
+	transition: transform .35s cubic-bezier(.5, .2, .4, .25) 0s
+}
+
+.effect.effect-three p a i:hover {
+	color: #cc6055
+}
+
+.effect.effect-three:hover p a {
+	opacity: 1
+}
+
+.effect.effect-three:hover p a:nth-child(1) {
+	transform: translate3d(0, 60px, 0);
+	-webkit-transform: translate3d(0, 60px, 0);
+	transition: all .35s cubic-bezier(.5, .2, .4, .25) .15s;
+	-webkit-transition: all .35s cubic-bezier(.5, .2, .4, .25) .15s
+}
+
+.effect.effect-three:hover p a:nth-child(1) i {
+	transform: translate3d(-100px, 0, 0);
+	transition: transform .35s cubic-bezier(.25, .4, .2, .5) .15s;
+	-webkit-transform: translate3d(-100px, 0, 0);
+	-webkit-transition: transform .35s cubic-bezier(.25, .4, .2, .5) .15s
+}
+
+.effect.effect-three:hover p a:nth-child(2) {
+	transform: translate3d(0, 30px, 0);
+	transition: all .35s cubic-bezier(.5, .2, .4, .25) .25s;
+	-webkit-transform: translate3d(0, 30px, 0);
+	-webkit-transition: all .35s cubic-bezier(.5, .2, .4, .25) .25s
+}
+
+.effect.effect-three:hover p a:nth-child(2) i {
+	transform: translate3d(-80px, 0, 0);
+	transition: transform .35s cubic-bezier(.25, .4, .2, .5) .25s;
+	-webkit-transform: translate3d(-80px, 0, 0);
+	-webkit-transition: transform .35s cubic-bezier(.25, .4, .2, .5) .25s
+}
+
+.effect.effect-three:hover p a:nth-child(3) {
+	transform: translate3d(0, 0, 0);
+	transition: all .35s cubic-bezier(.5, .2, .4, .25) .35s;
+	-webkit-transform: translate3d(0, 0, 0);
+	-webkit-transition: all .35s cubic-bezier(.5, .2, .4, .25) .35s
+}
+
+.effect.effect-three:hover p a:nth-child(3) i {
+	transform: translate3d(-45px, 0, 0);
+	transition: transform .35s cubic-bezier(.25, .4, .2, .5) .35s;
+	-webkit-transform: translate3d(-45px, 0, 0);
+	-webkit-transition: transform .35s cubic-bezier(.25, .4, .2, .5) .35s
+}
+
+.effect.effect-three img {
+	transform: scale3d(1.1, 1.1, 1) translate3d(15px, 0, 0);
+	transition: all .35s;
+	transform-origin: 85% 100%;
+	-webkit-transform: scale3d(1.1, 1.1, 1) translate3d(15px, 0, 0);
+	-webkit-transition: all .35s;
+	-webkit-transform-origin: 85% 100%
+}
+
+.effect.effect-three:hover img {
+	transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0);
+	-webkit-transform: scale3d(1.1, 1.1, 1) translate3d(0, 0, 0);
+	opacity: .6
+}
+
+.col3-block-height {
+	min-height: 350px!important
+}
+
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+  }
