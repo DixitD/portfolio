@@ -1,9 +1,13 @@
-/*<!--     Author- Dixit Hihoriya       -->
-<!--     StudentID-301201312     -->*/
+/*
+<!--     FileName: index.js       -->
+<!--     Author: Dixit Hihoriya   -->
+<!--     StudentID: 301201312     -->
+<!--     Date : 4th June 2022     -->
+*/
 
+// Module dependencies
 var express = require('express');
 var router = express.Router();
-
 
 
 module.exports.displayHomePage = (req, res, next) => {
