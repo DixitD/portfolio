@@ -4,6 +4,6 @@
 <!--     Date : 19th June 2022     -->*/
 
 module.exports = {
-    "URI" : "mongodb://localhost/27017",
+    "URI" : "mongodb+srv://dhihoriya:xbhl2cfJWJKWMhNu@cluster0.pvcvjxu.mongodb.net/test?retryWrites=true&w=majority",
     "Secret": 'SomeSecret'
 }
