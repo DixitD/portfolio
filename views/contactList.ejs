@@ -1,0 +1,68 @@
+<!--    FileName: contactList.ejs      -->
+<!--     Author: Dixit Hihoriya   -->
+<!--     StudentID: 301201312     -->
+<!--     Date : 19th June 2022     -->
+
+<%- include ('partials/navbar.ejs') %>
+
+<main style="margin-bottom: 10%;">
+
+  <div style="margin: auto; padding: auto;">
+    <div>
+      <section class="wrapper-full tab-container effectTab-header" id="style_3">
+        <div class="wrapper tab-item">
+          <div class="custom-row">
+            <div class="wrapper " align="center">
+              <h1 class="ti title">Contact List</h1>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <figure class="text-center">
+      <a class="btn btn-primary" href="contactList/add" type="button">Add New Contact</a>
+    </figure>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Contact</th>
+          <th scope="col">Email</th>
+          <% if(typeof displayName=='string' && displayName) { %>
+            <th scope="col" colspan="2">Action</th>
+            <% } %>
+        </tr>
+      </thead>
+      <tbody>
+        <%for(let count=0; count < BookList.length; count++) { %>
+          <tr>
+            <td>
+              <%= BookList[count].contactName %>
+            </td>
+            <td>
+              <%= BookList[count].contactPhone %>
+            </td>
+            <td>
+              <%=BookList[count].contactEmail %>
+            </td>
+            <% if(typeof displayName=='string' && displayName) { %>
+              <td><a class="btn btn-info" href="contactList/Update/<%= BookList[count]._id %>" type="button">Update</a>
+              </td>
+              <td><a class="btn btn-danger" href="contactList/delete/<%= BookList[count]._id %>"
+                  type="button">Delete</a></td>
+              <% } %>
+          </tr>
+          <% } %>
+
+            </tr>
+      </tbody>
+    </table>
+
+    </figure>
+  </div>
+
+</main>
+
+
+<%- include ('partials/footer.ejs') %>
