@@ -4,7 +4,7 @@
 <!--     Date : 19th June 2022     -->*/
 
 var express = require('express');
-const contactList = require('../model/contactList');
+const contactList = require('../Model/contactList');
 var router = express.Router();
 
 var indexController = require('../controllers/index')

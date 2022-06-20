@@ -7,7 +7,7 @@ var express = require('express');
 var router = express.Router();
 var mongoose = require("mongoose");
 
-var contactList = require('../model/contactList');
+var contactList = require('../Model/contactList');
 
 module.exports.displayContactList = (req, res, next) => {
     contactList.find((err, BookList) => {

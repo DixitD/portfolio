@@ -9,7 +9,7 @@ var mongoose = require("mongoose");
 
 var passport = require('passport');
 
-var contactList = require('../model/contactList');
+var contactList = require('../Model/contactList');
 var contactController = require('../controllers/contactList')
 
 //Authanticate User and Gaurd
